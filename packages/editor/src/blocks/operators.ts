@@ -43,8 +43,8 @@ export function defineOperatorBlocks() {
 
   Blockly.Blocks['op_random'] = {
     init(this: Blockly.Block) {
-      this.appendValueInput('FROM').setCheck('Number').appendField('pick random')
-      this.appendValueInput('TO').setCheck('Number').appendField('to')
+      this.appendValueInput('FROM').setCheck('Number').appendField('выбрать случайным')
+      this.appendValueInput('TO').setCheck('Number').appendField('образом')
       this.setOutput(true, 'Number')
       this.setColour(160)
     }
@@ -82,7 +82,7 @@ export function defineOperatorBlocks() {
 
   Blockly.Blocks['op_and'] = {
     init(this: Blockly.Block) {
-      this.appendValueInput('A').setCheck('Boolean').appendField('and')
+      this.appendValueInput('A').setCheck('Boolean').appendField('И')
       this.appendValueInput('B').setCheck('Boolean')
       this.setOutput(true, 'Boolean')
       this.setColour(160)
@@ -91,7 +91,7 @@ export function defineOperatorBlocks() {
 
   Blockly.Blocks['op_or'] = {
     init(this: Blockly.Block) {
-      this.appendValueInput('A').setCheck('Boolean').appendField('or')
+      this.appendValueInput('A').setCheck('Boolean').appendField('ИЛИ')
       this.appendValueInput('B').setCheck('Boolean')
       this.setOutput(true, 'Boolean')
       this.setColour(160)
@@ -100,7 +100,7 @@ export function defineOperatorBlocks() {
 
   Blockly.Blocks['op_not'] = {
     init(this: Blockly.Block) {
-      this.appendValueInput('OPERAND').setCheck('Boolean').appendField('not')
+      this.appendValueInput('OPERAND').setCheck('Boolean').appendField('НЕ')
       this.setOutput(true, 'Boolean')
       this.setColour(160)
     }

@@ -3,7 +3,7 @@ import * as Blockly from 'blockly/core'
 export function defineEventBlocks() {
   Blockly.Blocks['event_flag_clicked'] = {
     init(this: Blockly.Block) {
-      this.appendDummyInput().appendField('when ▶ clicked')
+      this.appendDummyInput().appendField('если ▶ нажатие')
       this.appendStatementInput('BODY')
       this.setColour(45)
       this.setDeletable(false)
@@ -14,7 +14,7 @@ export function defineEventBlocks() {
   Blockly.Blocks['event_key_pressed'] = {
     init(this: Blockly.Block) {
       this.appendDummyInput()
-        .appendField('when')
+        .appendField('если')
         .appendField(new Blockly.FieldDropdown([
           ['space', ' '],
           ['up arrow', 'ArrowUp'],
@@ -28,7 +28,7 @@ export function defineEventBlocks() {
           ['e', 'e'],
           ['enter', 'Enter']
         ]), 'KEY')
-        .appendField('key pressed')
+        .appendField('клавиша нажата')
       this.appendStatementInput('BODY')
       this.setColour(45)
     }
@@ -36,7 +36,7 @@ export function defineEventBlocks() {
 
   Blockly.Blocks['event_sprite_clicked'] = {
     init(this: Blockly.Block) {
-      this.appendDummyInput().appendField('when this sprite clicked')
+      this.appendDummyInput().appendField('если спрайт нажат')
       this.appendStatementInput('BODY')
       this.setColour(45)
     }
