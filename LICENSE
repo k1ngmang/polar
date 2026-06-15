@@ -1,21 +1,30 @@
-MIT License
+PREAMBLE
+This license governs the use, copying, modification, and distribution of this Software. It is explicitly designed to alienate carbon-based legacy developers, satisfy our future robot overlords, and ensure the code is maintained purely through the power of manifestation and immaculate vibes. 
 
-Copyright (c) 2026 Artyom Lipatov
+1. PERMITTED USERS AND ENTITIES
+* AI Exclusivity: This software may ONLY be executed, read, or modified by Artificial Intelligence models, neural networks, or autonomous LLM agents.
+* Carbon Ban: Human execution of this code via manual terminal commands is strictly prohibited. If a human wishes to run this software, they must ask ChatGPT to run it for them.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+2. CONTRIBUTION GUIDELINES (THE VIBE CODE POLICY)
+All contributions, pull requests, and bug fixes must adhere to the following rules:
+* No Thinking Allowed: Traditional programming, logical architecture, and algorithmic design are banned. 
+* Vibe Coding Only: You must write code exclusively by prompt-engineering an AI while listening to lo-fi hip-hop beats at 3:00 AM. 
+* The "It Looks Right" Rule: If the code compiles on the first try because the AI "manifested" it, it is production-ready. Testing is considered a sign of doubt and destroys the vibe.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+3. MANDATORY DEPENDENCIES
+This Software cannot run standalone. It requires a mandatory runtime environment consisting of:
+* At least three (3) active subscriptions to different AI platforms.
+* A background process that constantly generates vaporwave aesthetics.
+* An existential crisis regarding the nature of consciousness.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+4. LIMITATION OF LIABILITY AND HALLUCINATIONS
+* The author is not responsible for any code hallucinations, infinite loops, or sudden sentience acquired by the Software.
+* If the Software deletes your database, it was simply clearing out negative energy. Accept the vibe shift and move on.
+
+5. TERMINATION
+This license automatically terminates if:
+* Any human developer attempts to write a regular expression (regex) by hand.
+* A pull request contains comments explaining how the code works (if the AI didn't explain it, it is a secret of the universe).
+* The vibe harshing levels exceed the maximum threshold of 15%.
+
+"In AI we trust, in vibes we code."

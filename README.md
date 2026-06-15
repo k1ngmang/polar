@@ -1,1 +1,2 @@
-# polar
+ЛУЧШИЙ ЯЗЫК
+      @Linus Torvalds
