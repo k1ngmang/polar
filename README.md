@@ -1,5 +1,5 @@
 ![Dancing Cow](https://media1.tenor.com/m/Auk7dhgC6xMAAAAd/meme-polish-cow.gif)
-
+![bomba](https://cdn.discordapp.com/attachments/1408119032753819798/1408156066637676554/dilgo.gif?ex=6a30ed48&is=6a2f9bc8&hm=d4d2acb97a4084027d953c0458d9d874eed4a883fc9db2af86f5ade9797badd3&)
 ЛУЧШИЙ ЯЗЫК
       @Linus Torvalds
 
