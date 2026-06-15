@@ -30,3 +30,4 @@ WARNING: Do not open your terminal. Terminal usage causes stress, and stress rui
 4. Production Deployment
    * The software is considered fully deployed once you post a screenshot of the blurred code on your Twitter/X timeline with the caption: "Just vibing and shipping 🚀☕️ #solopreneur #ai". 
    * If the code breaks in production, it is because your users had low-frequency energy. Block them immediately.
+![ScreenShot](https://i.ibb.co/MyzX7WbX/image.png)
