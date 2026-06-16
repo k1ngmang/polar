@@ -103,7 +103,7 @@ interface ScriptThread {
 
 export class Engine {
   sprites: Sprite[] = []
-  private initialStates: Map<string, { x: number; y: number; direction: number; visible: boolean; size: number }> = new Map()
+  private initialStates: Map<string, { x: number; y: number; direction: number; visible: boolean; size: number; costume: HTMLImageElement | null }> = new Map()
   hats: HatBlock[] = []
   env = new RuntimeEnvironment()
   private threads: ScriptThread[] = []
@@ -140,7 +140,8 @@ export class Engine {
         y: sprite.y,
         direction: sprite.direction,
         visible: sprite.visible,
-        size: sprite.size
+        size: sprite.size,
+        costume: sprite.costume
       })
     }
 
@@ -168,6 +169,17 @@ export class Engine {
       sprite.sayText = ''
       sprite.sayType = null
       sprite.sayExpiry = 0
+
+      // Restore initial state
+      const state = this.initialStates.get(sprite.id)
+      if (state) {
+        sprite.x = state.x
+        sprite.y = state.y
+        sprite.direction = state.direction
+        sprite.visible = state.visible
+        sprite.size = state.size
+        sprite.costume = state.costume
+      }
     }
   }
 
