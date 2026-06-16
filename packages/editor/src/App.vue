@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" :class="{ 'is-fullscreen': isFullscreen }">
     <div class="editor-panel">
       <BlockEditor
         ref="editorRef"
@@ -10,8 +10,10 @@
     <div class="right-panel">
       <Toolbar
         :running="engine.isRunning"
+        :is-fullscreen="isFullscreen"
         @toggle-run="toggleRun"
         @stop="stopAll"
+        @toggle-fullscreen="toggleFullscreen"
       />
       <Stage
         ref="stageRef"
@@ -52,6 +54,7 @@ const stageRef = ref<InstanceType<typeof Stage>>()
 const sprites = reactive<Sprite[]>([createSprite('Кот')])
 const selectedSpriteId = ref(sprites[0].id)
 const consoleLines = ref<string[]>([])
+const isFullscreen = ref(false)
 
 const engine = new Engine()
 engine.setSprites(sprites)
@@ -139,6 +142,10 @@ function renameSprite(id: string, name: string) {
   if (sprite) sprite.name = name
 }
 
+function toggleFullscreen() {
+  isFullscreen.value = !isFullscreen.value
+}
+
 document.addEventListener('keydown', (e) => {
   if ((e.target as HTMLElement)?.tagName === 'INPUT') return
   engine.handleKeyPress(e.key)
@@ -170,5 +177,19 @@ document.addEventListener('keyup', (e) => {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.app.is-fullscreen .editor-panel {
+  display: none;
+}
+
+.app.is-fullscreen .right-panel {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app.is-fullscreen :deep(.sprite-panel),
+.app.is-fullscreen :deep(.console-panel) {
+  display: none;
 }
 </style>

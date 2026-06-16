@@ -15,17 +15,26 @@
     >
       ■
     </button>
+    <button
+      class="btn fullscreen-btn"
+      @click="$emit('toggleFullscreen')"
+      :title="isFullscreen ? 'Выйти из полноэкранного режима' : 'Полноэкранный режим'"
+    >
+      {{ isFullscreen ? '❐' : '⛶' }}
+    </button>
   </div>
 </template>
 
 <script setup lang="ts">
 defineProps<{
   running: boolean
+  isFullscreen: boolean
 }>()
 
 defineEmits<{
   toggleRun: []
   stop: []
+  toggleFullscreen: []
 }>()
 </script>
 
@@ -73,5 +82,10 @@ defineEmits<{
 .stop-btn {
   background: #e74c3c;
   color: white;
+}
+
+.fullscreen-btn {
+  background: #89b4fa;
+  color: #11111b;
 }
 </style>
