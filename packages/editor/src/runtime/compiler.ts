@@ -66,6 +66,16 @@ function compileStmt(block: Blockly.Block): ASTNode {
   }
 }
 
+function getStaticString(block: Blockly.Block | null, defaultValue: string): string {
+  if (!block) return defaultValue
+  if (block.type === 'text') {
+    return String(block.getFieldValue('TEXT'))
+  }
+  const val = block.getFieldValue('TEXT') ?? block.getFieldValue('NUM') ?? block.getFieldValue('NAME')
+  if (val !== null && val !== undefined) return String(val)
+  return defaultValue
+}
+
 function compileStmtInner(block: Blockly.Block): ASTNode {
   switch (block.type) {
     case 'motion_move':
@@ -160,12 +170,12 @@ function compileStmtInner(block: Blockly.Block): ASTNode {
       return { type: 'touching_edge' }
     case 'sensing_touching_sprite': {
       const target = block.getInputTargetBlock('SPRITE')
-      const name = target ? String(compileExpr(target)) : 'Кот'
+      const name = getStaticString(target, 'Кот')
       return { type: 'touching_sprite', sprite: name }
     }
     case 'sensing_distance_to': {
       const target = block.getInputTargetBlock('SPRITE')
-      const name = target ? String(compileExpr(target)) : 'Кот'
+      const name = getStaticString(target, 'Кот')
       return { type: 'distance_to', sprite: name }
     }
     case 'sensing_timer':
@@ -174,7 +184,7 @@ function compileStmtInner(block: Blockly.Block): ASTNode {
       return { type: 'reset_timer' }
     case 'sensing_of': {
       const target = block.getInputTargetBlock('SPRITE')
-      const name = target ? String(compileExpr(target)) : 'Кот'
+      const name = getStaticString(target, 'Кот')
       return { type: 'sprite_property', sprite: name, property: String(block.getFieldValue('PROP')) }
     }
 

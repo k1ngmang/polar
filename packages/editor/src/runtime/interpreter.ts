@@ -244,13 +244,24 @@ export async function execute(
       sprite.size = num(node.percent, sprite, env)
       break
 
-    case 'switch_costume':
-      // Costume switching handled externally
+    case 'switch_costume': {
+      const costumeVal = String(evalExpr(node.costume, sprite, env))
+      if (!costumeVal || costumeVal === '0' || costumeVal === 'default') {
+        sprite.costume = null
+      } else {
+        const img = new Image()
+        img.src = costumeVal
+        img.onload = () => {
+          sprite.costume = img
+        }
+      }
       break
+    }
 
     case 'wait': {
       const seconds = num(node.seconds, sprite, env)
       await sleep(seconds * 1000, abortSignal)
+      if (abortSignal?.aborted) return { type: 'stop', target: 'all' }
       break
     }
 
